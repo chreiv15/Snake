@@ -25,7 +25,7 @@ void GameManager::play() {
 
 	// Load bitmaps
 	SDLBmp backround("Assets/gfx/background.bmp");
-	SDLBmp player("Assets/gfx/snake.bmp");
+	SDLBmp player("Assets/gfx/player.bmp");
 	//SDLBmp treasure("Assets/gfx/treasure.bmp");
 
 	// Calculate render frames per second (second / frames) (60)
