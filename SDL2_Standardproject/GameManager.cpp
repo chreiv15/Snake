@@ -26,7 +26,7 @@ void GameManager::play() {
 	// Load bitmaps
 	SDLBmp backround("Assets/gfx/background.bmp");
 	SDLBmp player("Assets/gfx/snake.bmp");
-	SDLBmp treasure("Assets/gfx/treasure.bmp");
+	//SDLBmp treasure("Assets/gfx/treasure.bmp");
 
 	// Calculate render frames per second (second / frames) (60)
 	float render_fps = 1.f / 60.f;
@@ -50,19 +50,19 @@ void GameManager::play() {
 		}
 		
 		// Right key
-		if (InputManager::Instance().KeyDown(SDL_SCANCODE_RIGHT) ||
+		else if (InputManager::Instance().KeyDown(SDL_SCANCODE_RIGHT) ||
 			InputManager::Instance().KeyStillDown(SDL_SCANCODE_RIGHT)) {
 			player.x += displacement;
 		}
 
 		// Key up
-		if (InputManager::Instance().KeyDown(SDL_SCANCODE_UP) ||
+		else if (InputManager::Instance().KeyDown(SDL_SCANCODE_UP) ||
 			InputManager::Instance().KeyStillDown(SDL_SCANCODE_UP)) {
 			player.y -= displacement;
 		}
 
 		// Key down
-		if (InputManager::Instance().KeyDown(SDL_SCANCODE_DOWN) ||
+		else if (InputManager::Instance().KeyDown(SDL_SCANCODE_DOWN) ||
 			InputManager::Instance().KeyStillDown(SDL_SCANCODE_DOWN)) {
 			player.y += displacement;
 		}
@@ -77,6 +77,7 @@ void GameManager::play() {
 
 		// Check if it's time to render
 		if (m_lastRender >= render_fps) {
+			
 			// Add bitmaps to renderer
 			backround.draw();
 			player.draw();
@@ -87,8 +88,13 @@ void GameManager::play() {
 			m_lastRender = 0.f;
 		}
 
+		
+		
 		// Sleep to prevent CPU exthaustion (1ms == 1000 frames per second)
 		SDL_Delay(1);
+
+
+		
 	}
 
 
