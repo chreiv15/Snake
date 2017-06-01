@@ -43,7 +43,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <LibraryPath>C:\Skole\2. Semester\C++\Snake\Snake\packages\sdl2.2.0.5\build\native\lib\x64\dynamic;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Users\tommy\Desktop\Snake\packages\sdl2.2.0.5\build\native\lib\Win32\dynamic;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
