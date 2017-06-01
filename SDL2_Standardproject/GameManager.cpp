@@ -37,6 +37,8 @@ void GameManager::play() {
 		// Update input and deltatime
 		InputManager::Instance().Update();
 		Timer::Instance().update();
+		
+
 
 		// Calculate displacement based on deltatime
 		float displacement = 150.F * Timer::Instance().deltaTime();

@@ -103,6 +103,7 @@
     <ClInclude Include="SDL\SDLMath.h" />
     <ClInclude Include="SDL\SDLWindow.h" />
     <ClInclude Include="Timer.h" />
+    <ClInclude Include="Treasure.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\gfx\sdl2.bmp" />
